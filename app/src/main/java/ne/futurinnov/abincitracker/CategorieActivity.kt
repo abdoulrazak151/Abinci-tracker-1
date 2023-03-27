@@ -9,6 +9,7 @@ import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.GridCells
+import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.LazyVerticalGrid
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -23,6 +24,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import ne.futurinnov.abincitracker.data.local.entities.Categorie
 import ne.futurinnov.abincitracker.presentation.components.FoodItem
+import ne.futurinnov.abincitracker.presentation.components.LinearFoodItem
 import ne.futurinnov.abincitracker.ui.theme.AbinciTrackerTheme
 import ne.futurinnov.abincitracker.ui.theme.BlueFoncee
 
@@ -84,14 +86,12 @@ fun Body(categorie: Categorie, context: Context) {
            )
         }
         Spacer(modifier = Modifier.height(10.dp))
-        LazyVerticalGrid(cells = GridCells.Fixed(3) ){
+        LazyColumn(modifier = Modifier.padding(10.dp)){
             items(categorie.foods){
-                FoodItem(it)
+                LinearFoodItem(food = it, context =context )
             }
         }
-
     }
-
 }
 
 
