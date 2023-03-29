@@ -20,16 +20,17 @@ import ne.futurinnov.abincitracker.ui.theme.GreenDark
 import ne.futurinnov.abincitracker.ui.theme.Orange
 
 @Composable
-fun LinearFoodItem(food:Food, context: Context) {
+fun LinearFoodItem(food:Food, context: Context, onClick:(Food)->Unit) {
     Card(
         modifier = Modifier
-            .padding(10.dp),
+            .padding(top = 5.dp),
         shape = RoundedCornerShape(10.dp)
     ) {
         Row(
+            modifier=Modifier.fillMaxWidth()
 
         ) {
-            Box(modifier = Modifier.size(height = 150.dp, width = 150.dp)){
+            Box(modifier = Modifier.size(height = 100.dp, width = 100.dp)){
                 Image(painter = painterResource(id = ne.futurinnov.abincitracker.R.drawable.mangue), contentDescription =food.libelle )
             }
             Spacer(modifier = Modifier.width(10.dp))

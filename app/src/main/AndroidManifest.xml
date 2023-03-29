@@ -13,6 +13,15 @@
         android:theme="@style/Theme.AbinciTracker"
         tools:targetApi="31">
         <activity
+            android:name=".FoodActivity"
+            android:exported="false"
+            android:label="@string/title_activity_food"
+            android:theme="@style/Theme.AbinciTracker">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".CategorieActivity"
             android:exported="false"
             android:label="@string/title_activity_categorie"

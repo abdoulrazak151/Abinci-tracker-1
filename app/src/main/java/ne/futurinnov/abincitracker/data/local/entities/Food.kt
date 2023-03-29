@@ -9,4 +9,4 @@ data class Food(
     val date:Date,
     var nutriments:List<NutrimentFood> = mutableListOf(),
     var localites:List<LocaliteFood> = mutableListOf()
-    )
+    ):java.io.Serializable

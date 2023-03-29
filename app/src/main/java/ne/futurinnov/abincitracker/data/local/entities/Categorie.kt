@@ -5,5 +5,6 @@ data class Categorie(
     val name:String,
     val enable:Boolean,
     val urlImage:String,
+    val description:String="",
     var foods:List<Food> = mutableListOf()
 ):java.io.Serializable

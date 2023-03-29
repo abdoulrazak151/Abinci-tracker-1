@@ -48,7 +48,7 @@ class AllCategorieActivity : ComponentActivity() {
                         Column(
                             modifier = Modifier.padding(10.dp)
                         ) {
-                            Body(categorieAndFoodViewmodel = categorieAndFoodViewmodel, context = applicationContext)
+                            Body(categorieAndFoodViewmodel = categorieAndFoodViewmodel, context = this@AllCategorieActivity)
                         }
                     }
                 }

@@ -15,10 +15,13 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import ne.futurinnov.abincitracker.CategorieActivity
 import ne.futurinnov.abincitracker.R
 import ne.futurinnov.abincitracker.data.local.entities.Categorie
+import ne.futurinnov.abincitracker.ui.theme.BlueFoncee
 import ne.futurinnov.abincitracker.ui.theme.GreenDark
 import ne.futurinnov.abincitracker.ui.theme.GreenLight
 import ne.futurinnov.abincitracker.ui.theme.OrangeCard
@@ -39,8 +42,8 @@ fun CategoriItem(
         border = BorderStroke(width = 0.dp, color = Color.White)
     ) {
         Column(
-
             modifier=Modifier
+                .wrapContentSize(Alignment.Center)
                 .clickable {
                     val intent=Intent(context.applicationContext,CategorieActivity::class.java )
                     intent.putExtra("categorie", categorie)
@@ -50,9 +53,17 @@ fun CategoriItem(
             horizontalAlignment = Alignment.CenterHorizontally,
             verticalArrangement = Arrangement.Center
         ) {
-            Icon(modifier = Modifier.height(20.dp).width(20.dp),painter = painterResource(id = R.drawable.settings) , contentDescription = null)
+            Icon(modifier = Modifier.height(20.dp).width(20.dp),painter = painterResource(id = R.drawable.settings) , contentDescription = null, tint = BlueFoncee)
             Spacer(modifier = Modifier.height(5.dp))
-            Text(text = categorie.name)
+            Text(
+                text = categorie.name,
+                fontSize=12.sp,
+                color= BlueFoncee,
+                textAlign = TextAlign.Center,
+                modifier= Modifier
+                    .fillMaxWidth()
+
+            )
         }
 
     }
