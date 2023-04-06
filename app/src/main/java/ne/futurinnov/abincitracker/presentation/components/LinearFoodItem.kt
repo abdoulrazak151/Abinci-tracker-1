@@ -1,21 +1,28 @@
 package ne.futurinnov.abincitracker.presentation.components
 
 import android.content.Context
+import android.content.Intent
 import android.widget.Space
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material.Card
-import androidx.compose.material.Icon
-import androidx.compose.material.Text
+import androidx.compose.material.*
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.outlined.ArrowBack
+import androidx.compose.material.icons.outlined.Settings
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.toLowerCase
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import ne.futurinnov.abincitracker.FoodActivity
+import ne.futurinnov.abincitracker.data.local.entities.Categorie
 import ne.futurinnov.abincitracker.data.local.entities.Food
+import ne.futurinnov.abincitracker.ui.theme.BlueFoncee
 import ne.futurinnov.abincitracker.ui.theme.GreenDark
 import ne.futurinnov.abincitracker.ui.theme.Orange
 
@@ -23,6 +30,12 @@ import ne.futurinnov.abincitracker.ui.theme.Orange
 fun LinearFoodItem(food:Food, context: Context, onClick:(Food)->Unit) {
     Card(
         modifier = Modifier
+            .clickable{
+                val intent=Intent(context, FoodActivity::class.java)
+                food.localites= listOf()
+                intent.putExtra("food", food)
+                context.startActivity(intent)
+            }
             .padding(top = 5.dp),
         shape = RoundedCornerShape(10.dp)
     ) {

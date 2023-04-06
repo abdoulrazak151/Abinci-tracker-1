@@ -45,9 +45,9 @@ class CategorieActivity : ComponentActivity() {
                     color = MaterialTheme.colors.background
                 ) {
                     Scaffold(
-                        topBar = { TopBar(categorie = categorie, context = applicationContext, onBack = { onBack() })}
+                        topBar = { TopBar(categorie = categorie, context = this@CategorieActivity, onBack = { onBack() })}
                     ) {
-                        Body(categorie = categorie,context =applicationContext )
+                        Body(categorie = categorie,context =this@CategorieActivity )
                     }
                 }
             }

@@ -2,7 +2,7 @@ package ne.futurinnov.abincitracker.data.local.entities
 
 import java.util.Date
 
-data class Food(
+data class Food (
     val id:Int,
     val  libelle :String,
     val description:String,

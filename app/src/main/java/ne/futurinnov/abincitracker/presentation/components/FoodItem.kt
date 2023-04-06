@@ -1,6 +1,9 @@
 package ne.futurinnov.abincitracker.presentation.components
 
+import android.content.Context
+import android.content.Intent
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.Card
 import androidx.compose.material.Icon
@@ -16,6 +19,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import ne.futurinnov.abincitracker.FoodActivity
 import ne.futurinnov.abincitracker.R
 import ne.futurinnov.abincitracker.data.local.entities.Food
 import ne.futurinnov.abincitracker.ui.theme.BlueFoncee
@@ -23,9 +27,10 @@ import ne.futurinnov.abincitracker.ui.theme.GreenDark
 import ne.futurinnov.abincitracker.ui.theme.Orange
 
 @Composable
-fun FoodItem(foodLFood: Food, modifier:Modifier=Modifier) {
+fun FoodItem(foodLFood: Food, modifier:Modifier=Modifier, context: Context) {
     Card (
         backgroundColor = Color.White,
+
         modifier =modifier
             ){
       Column(
@@ -34,6 +39,12 @@ fun FoodItem(foodLFood: Food, modifier:Modifier=Modifier) {
       ) {
           Image(
               modifier= Modifier
+                  .clickable{
+                      val intent= Intent(context, FoodActivity::class.java)
+                      foodLFood.localites= listOf()
+                      intent.putExtra("food", foodLFood)
+                      context.startActivity(intent)
+                  }
                   .height(100.dp)
                   .width(100.dp),
               painter = painterResource(id = R.drawable.mangue),

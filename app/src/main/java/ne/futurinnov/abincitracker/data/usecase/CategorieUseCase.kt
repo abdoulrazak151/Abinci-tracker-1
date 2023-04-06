@@ -7,13 +7,16 @@ import java.time.LocalDate
 import java.util.*
 val localites= listOf(
     LocaliteFood(id = 1, latitude = 12.23, longitude = 123.56, pays = "Niger", region = "Niamey", "Plateau", prixFoodPerLocalite = 2000.0, unite = "kg", enable = true),
-    LocaliteFood(id = 2, latitude = 124.23, longitude = 123.56, pays = "Niger", region = "Niamey", "Plateau", prixFoodPerLocalite = 2000.0, unite = "kg", enable = true),
-    LocaliteFood(id = 3, latitude = 125.3, longitude = 123.56, pays = "Niger", region = "Niamey", "Plateau", prixFoodPerLocalite = 2000.0, unite = "kg", enable = true),
-    LocaliteFood(id = 4, latitude = 12.20, longitude = 1.56, pays = "Niger", region = "Niamey", "Plateau", prixFoodPerLocalite = 2000.0, unite = "kg", enable = true),
-    LocaliteFood(id = 5, latitude = 12.23, longitude = 13.56, pays = "Niger", region = "Niamey", "Plateau", prixFoodPerLocalite = 2000.0, unite = "kg", enable = true),
-    LocaliteFood(id = 6, latitude = 12.23, longitude = 123.56, pays = "Niger", region = "Niamey", "Plateau", prixFoodPerLocalite = 2000.0, unite = "kg", enable = true),
-    LocaliteFood(id = 7, latitude = 12.23, longitude = 123.56, pays = "Niger", region = "Niamey", "Plateau", prixFoodPerLocalite = 2000.0, unite = "kg", enable = true),
-    LocaliteFood(id = 8, latitude = 12.23, longitude = 123.56, pays = "Niger", region = "Niamey", "Plateau", prixFoodPerLocalite = 2000.0, unite = "kg", enable = true),
+    LocaliteFood(id = 2, latitude = 124.23, longitude = 123.56, pays = "Niger", region = "Niamey", "Koira kano", prixFoodPerLocalite = 2000.0, unite = "kg", enable = true),
+    LocaliteFood(id = 3, latitude = 125.3, longitude = 123.56, pays = "Niger", region = "Niamey", "Sonici", prixFoodPerLocalite = 2000.0, unite = "kg", enable = true),
+    LocaliteFood(id = 4, latitude = 12.20, longitude = 1.56, pays = "Niger", region = "Niamey", "Aeroport", prixFoodPerLocalite = 2000.0, unite = "kg", enable = true),
+    LocaliteFood(id = 5, latitude = 12.23, longitude = 13.56, pays = "Niger", region = "Niamey", "Dan zama", prixFoodPerLocalite = 2000.0, unite = "kg", enable = true),
+    LocaliteFood(id = 6, latitude = 12.23, longitude = 123.56, pays = "Niger", region = "Niamey", "Couronne nord", prixFoodPerLocalite = 2000.0, unite = "kg", enable = true),
+    LocaliteFood(id = 7, latitude = 12.23, longitude = 123.56, pays = "Niger", region = "Niamey", "Lazaret", prixFoodPerLocalite = 2000.0, unite = "kg", enable = true),
+    LocaliteFood(id = 8, latitude = 12.23, longitude = 123.56, pays = "Niger", region = "Niamey", "Habou tegui", prixFoodPerLocalite = 2000.0, unite = "kg", enable = true),
+    LocaliteFood(id = 9, latitude = 12.23, longitude = 123.56, pays = "Niger", region = "Niamey", "koira tegui", prixFoodPerLocalite = 2000.0, unite = "kg", enable = true),
+    LocaliteFood(id = 10, latitude = 12.23, longitude = 123.56, pays = "Niger", region = "Niamey", "lamorde", prixFoodPerLocalite = 2000.0, unite = "kg", enable = true),
+    LocaliteFood(id = 11, latitude = 12.23, longitude = 123.56, pays = "Niger", region = "Niamey", "nordire", prixFoodPerLocalite = 2000.0, unite = "kg", enable = true),
 )
 
 

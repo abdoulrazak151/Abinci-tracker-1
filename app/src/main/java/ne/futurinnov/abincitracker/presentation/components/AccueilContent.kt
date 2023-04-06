@@ -46,7 +46,7 @@ fun AccueilContent(
    ) {
        CategorieScope(categorieAndFoodViewmodel.getListCategorie(),context)
        Spacer(modifier = Modifier.height(10.dp))
-       FoodScope()
+       FoodScope(context=context)
     
 }
 
@@ -99,7 +99,7 @@ fun CategorieScope(categories:List<Categorie>, context: Context) {
 
 @OptIn(ExperimentalFoundationApi::class)
 @Composable
-fun FoodScope() {
+fun FoodScope(context: Context) {
     Column(
 
         modifier = Modifier
@@ -127,7 +127,7 @@ fun FoodScope() {
 
             cells = GridCells.Adaptive(100.dp)){
             items(foodUsecase){
-            FoodItem(it, Modifier.padding(5.dp))
+            FoodItem(it, Modifier.padding(5.dp), context=context)
             }
         }
 
